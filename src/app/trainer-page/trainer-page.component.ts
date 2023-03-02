@@ -1,10 +1,10 @@
 import {HttpClient, HttpErrorResponse} from '@angular/common/http';
 import { Component, OnInit } from '@angular/core';
 import { User } from 'src/app/models/user.model';
-import { UserService } from 'src/app/services/user.service';
+import { UserService } from 'src/app/services/service/user.service';
 import { environment } from '.secure_files/environment';
-import {CollectService} from "../../services/collect.service";
-import {PokemonCatalogueService} from "../../services/pokemon-catalogue.service";
+import {CollectService} from "../services/service/collect.service";
+import {PokemonCatalogueService} from "../services/service/pokemon-catalogue.service";
 
 export class Trainer {
   constructor(public username: string, public pokemon: string) {}

@@ -1,13 +1,13 @@
 import { Component, EventEmitter, Output } from '@angular/core';
 import { NgForm } from '@angular/forms';
 import { User } from 'src/app/models/user.model';
-import { LoginService } from 'src/app/services/login.service';
-import { UserService } from 'src/app/services/user.service';
+import { LoginService } from 'src/app/services/service/login.service';
+import { UserService } from 'src/app/services/service/user.service';
 
 @Component({
-  selector: 'app-login-form',
-  templateUrl: './login-form.component.html',
-  styleUrls: ['./login-form.component.css']
+  selector: 'app-loginForm',
+  templateUrl: './loginForm.component.html',
+  styleUrls: ['./loginForm.component.css']
 })
 export class LoginFormComponent {
 

@@ -3,6 +3,7 @@ import { BrowserModule } from '@angular/platform-browser';
 import { HttpClientModule } from '@angular/common/http';
 import { NgxPaginationModule } from 'ngx-pagination';
 
+import { LoginFormComponent } from './landing-page/loginForm/loginForm.component';
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { HeaderComponent } from './header/header.component';
@@ -19,6 +20,7 @@ import { CatchMeButtonComponent } from './pokemon-list/catch-me-button/catch-me-
     PokemonListComponent,
     LandingPageComponent,
     TrainerPageComponent,
+    LoginFormComponent,
     NavbarComponent,
     CatchMeButtonComponent
   ],

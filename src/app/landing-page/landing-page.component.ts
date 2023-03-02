@@ -1,7 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { Router } from '@angular/router';
-import { UserService } from 'src/app/services/user.service';
-
+import { UserService } from 'src/app/services/service/user.service';
 @Component({
   selector: 'app-landing-page',
   templateUrl: './landing-page.component.html',

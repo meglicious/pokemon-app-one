@@ -1,8 +1,8 @@
 import { HttpErrorResponse } from '@angular/common/http';
 import { Component, Input, OnInit } from '@angular/core';
 import { User } from 'src/app/models/user.model';
-import { CollectService } from 'src/app/services/collect.service';
-import { UserService } from 'src/app/services/user.service';
+import { CollectService } from 'src/app/services/service/collect.service';
+import { UserService } from 'src/app/services/service/user.service';
 
 
 @Component({
