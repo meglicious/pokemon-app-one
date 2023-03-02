@@ -1,0 +1,11 @@
+header
+{
+  padding: 20px 0px;
+  text-align: center;
+  background-color: seagreen;
+}
+header hi{
+  text-transform: uppercase;
+  color: aliceblue;
+  letter-spacing: 3px;
+}
