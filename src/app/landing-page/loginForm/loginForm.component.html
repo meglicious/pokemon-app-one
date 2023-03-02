@@ -1,0 +1,27 @@
+<form style="margin-top: 2em" #loginForm="ngForm" (ngSubmit)="loginSubmit(loginForm)">
+  <fieldset class="mb-3">
+    <label for="username" class="block"></label>
+    <input
+      required
+      maxlength="20"
+      minlength="3"
+      type="text"
+	  ngModel
+	  #username="ngModel"
+      name="username"
+      id="username"
+      class="border border-slate-300 p-2 rounded max-w-sm"
+      placeholder="ashketchum"
+    />
+  </fieldset>
+  <ng-container *ngIf="!loading; else spinner">
+    <button *ngIf="!username.errors && !username.invalid" class="login-button animate__animated animate__rollIn animate__faster" type="submit"  [disabled]="loginForm.form.invalid">Log in</button>
+  </ng-container>
+  <ng-template #spinner>
+    <span class="material-icons animate-spin text-teal-600">refresh</span>
+  </ng-template>
+  <div>
+    <p class="warning animate__animated animate__tada animate__faster" *ngIf="username.errors && username.errors['required']">Username is required.</p>
+    <p class="warning animate__animated animate__tada animate__faster" *ngIf="username.invalid && (username.errors && !username.errors['required'])">Username needs more characters.</p>
+  </div>
+</form>

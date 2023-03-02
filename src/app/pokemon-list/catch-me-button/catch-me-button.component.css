@@ -1,0 +1,11 @@
+
+.pokeball-image{
+  display: inline-block;
+  max-width:20px;
+  max-height:20px;
+  width: auto;
+  height: auto;
+  alignment: bottom;
+  vertical-align: bottom;
+}
+

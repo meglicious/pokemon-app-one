@@ -1,0 +1,12 @@
+<ng-container *ngIf="user !== undefined">
+  <nav
+    class="bg bg-yellow-600 flex justify-between items-center p-4 w-full top-0 z-50 sticky"
+  >
+    <span class="font-normal text-2xl text"><a routerLink="/pokemons">POKEMON TRAINER</a></span>
+      <ul class="flex">
+        <li class="px-4 text"><a routerLink="/pokemons">CATALOGUE</a></li>|
+        <li class="px-4 text"><a routerLink="/profile">PROFILE</a></li>|
+        <li class="px-4 text"><button (click)="onLogout()">LOG OUT</button></li>
+      </ul>
+  </nav>
+  </ng-container>

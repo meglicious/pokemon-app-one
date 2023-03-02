@@ -7,12 +7,20 @@ import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { HeaderComponent } from './header/header.component';
 import { PokemonListComponent } from './pokemon-list/pokemon-list.component';
+import { LandingPageComponent } from './landing-page/landing-page.component';
+import { TrainerPageComponent } from './trainer-page/trainer-page.component';
+import { NavbarComponent } from './navbar/navbar.component';
+import { CatchMeButtonComponent } from './pokemon-list/catch-me-button/catch-me-button.component';
 
 @NgModule({
   declarations: [
     AppComponent,
     HeaderComponent,
-    PokemonListComponent
+    PokemonListComponent,
+    LandingPageComponent,
+    TrainerPageComponent,
+    NavbarComponent,
+    CatchMeButtonComponent
   ],
   imports: [
     BrowserModule,
