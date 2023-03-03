@@ -7,7 +7,7 @@
       minlength="3"
       type="text"
 	  ngModel
-	  #username="ngModel"
+	  #username="NgForm"
       name="username"
       id="username"
       class="border border-slate-300 p-2 rounded max-w-sm"
@@ -22,6 +22,6 @@
   </ng-template>
   <div>
     <p class="warning animate__animated animate__tada animate__faster" *ngIf="username.errors && username.errors['required']">Username is required.</p>
-    <p class="warning animate__animated animate__tada animate__faster" *ngIf="username.invalid && (username.errors && !username.errors['required'])">Username needs more characters.</p>
+    <p class="warning animate__animated animate__tada animate__faster" *ngIf="username.invalid && (username.errors && !username.errors['required'])">Username is too short.</p>
   </div>
 </form>

@@ -36,6 +36,13 @@ yarn-error.log
 /libpeerconnection.log
 testem.log
 /typings
+.env.local
+.env.development.local
+.env.test.local
+.env.production.local
+.idea
+environment.prod.ts
+environment.ts
 
 # System files
 .DS_Store

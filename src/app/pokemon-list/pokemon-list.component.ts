@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { DataService } from '../services/data.service';
+import { Pokemon } from '../models/pokemon.model';
 
 @Component({
   selector: 'app-pokemon-list',
@@ -28,5 +29,8 @@ export class PokemonListComponent implements OnInit {
         });
       });
     });
+  }
+  public pokemonById(id: string):  Pokemon | undefined {
+    return this.pokemons.find((pokemon: Pokemon) => pokemon.name === id);
   }
 }

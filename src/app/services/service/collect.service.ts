@@ -2,10 +2,10 @@ import { HttpClient, HttpHeaders } from '@angular/common/http';
 import { Injectable } from '@angular/core';
 import { Observable, tap } from 'rxjs';
 import { environment } from '.secure_files/environment';
-import { Pokemon } from '../models/pokemon.model';
-import { User } from '../models/user.model';
-import { PokemonCatalogueService } from './pokemon-catalogue.service';
+import { Pokemon } from 'src/app/models/pokemon.model'
+import { User } from 'src/app/models/user.model';
 import { UserService } from './user.service';
+import { PokemonListComponent } from 'src/app/pokemon-list/pokemon-list.component';
 
 const { apiKey, apiUser } = environment;
 
@@ -15,7 +15,7 @@ const { apiKey, apiUser } = environment;
 export class CollectService {
   constructor(
     private http: HttpClient,
-    private readonly pokemonService: PokemonCatalogueService,
+    private readonly pokemonService: PokemonListComponent,
     private readonly userService: UserService
   ) {}
 

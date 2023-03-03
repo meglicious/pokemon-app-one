@@ -10,7 +10,7 @@ import { UserService } from 'src/app/services/service/user.service';
   templateUrl: './catch-me-button.component.html',
   styleUrls: ['./catch-me-button.component.css']
 })
-export class CollectButtonComponent implements OnInit {
+export class CatchMeButtonComponent implements OnInit {
 
   @Input() pokemonId: string = "";
   public isCollected: boolean = false;

@@ -4,7 +4,7 @@ import { User } from 'src/app/models/user.model';
 import { UserService } from 'src/app/services/service/user.service';
 import { environment } from '.secure_files/environment';
 import {CollectService} from "../services/service/collect.service";
-import {PokemonCatalogueService} from "../services/service/pokemon-catalogue.service";
+import { PokemonListComponent } from 'src/app/pokemon-list/pokemon-list.component';
 
 export class Trainer {
   constructor(public username: string, public pokemon: string) {}

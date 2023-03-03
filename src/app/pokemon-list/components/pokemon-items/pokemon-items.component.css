@@ -1,0 +1,12 @@
+.toolbar{
+  background-color: #13ddc5;
+  margin-bottom: 20px;
+  border-radius: 10px;
+  border: solid 2px #a2ffcb;
+  height: 25px;
+}
+
+.column-label{
+  font-size: 15px;
+}
+

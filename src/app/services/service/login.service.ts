@@ -1,8 +1,8 @@
 import { HttpClient, HttpHeaders } from '@angular/common/http';
-import { Injectable } from '@angular/core';
+import { ENVIRONMENT_INITIALIZER, EnvironmentInjector, Injectable } from '@angular/core';
 import { map, Observable, of, switchMap} from 'rxjs';
 import { environment } from '.secure_files/environment';
-import { User } from '../models/user.model';
+import { User } from 'src/app/models/user.model';
 
 const { apiUser, apiKey } = environment;
 
