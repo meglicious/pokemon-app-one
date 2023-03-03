@@ -2,14 +2,13 @@ import {HttpClient, HttpErrorResponse} from '@angular/common/http';
 import { Component, OnInit } from '@angular/core';
 import { User } from 'src/app/models/user.model';
 import { UserService } from 'src/app/services/service/user.service';
-import { environment } from '.secure_files/environment';
+import { environment } from 'src/app/environments/environments.component';
 import {CollectService} from "../services/service/collect.service";
 import { PokemonListComponent } from 'src/app/pokemon-list/pokemon-list.component';
 
 export class Trainer {
   constructor(public username: string, public pokemon: string) {}
 }
-const { apiUser } = environment;
 
 @Component({
   selector: 'app-trainer-page',
@@ -24,6 +23,9 @@ export class TrainerPageComponent implements OnInit{
     private userService: UserService,
     private collectService: CollectService
   ) {}
+  ngOnInit(): void {
+    throw new Error('Method not implemented.');
+  }
 
   get user(): User | undefined {
     return this.userService.user;
@@ -51,12 +53,4 @@ export class TrainerPageComponent implements OnInit{
     });
   }
 
-  getTrainers() {
-    this.httpClient.get<any>(apiUser).subscribe((response) => {
-      this.trainer = response;
-    });
-  }
-  ngOnInit(): void {
-    this.getTrainers();
-  }
 }

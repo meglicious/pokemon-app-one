@@ -1,14 +1,11 @@
-<mat-toolbar class="toolbar">
+
   <div fxHide.lt-sm>
     <span class="column-label">Columns</span>
-    <mat-slider [max]="6" [min]="3" [(ngModel)]="gridColumns" [thumbLabel]="true"></mat-slider>
   </div>
-</mat-toolbar>
+
 <div class="content">
   <div fxLayout="row wrap" fxLayoutGap="50px grid">
-    <div [fxFlex]="(100/gridColumns) + '%'" fxFlex="25%" fxFlex.xs="100%" fxFlex.sm="33%"
-         *ngFor="let singlePokemon of pokemons">
-      <pokemon-items [thisPokemon]="singlePokemon"></pokemon-items>
+
     </div>
   </div>
-</div>
+

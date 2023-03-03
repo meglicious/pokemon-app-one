@@ -13,6 +13,7 @@ import { TrainerPageComponent } from './trainer-page/trainer-page.component';
 import { NavbarComponent } from './navbar/navbar.component';
 import { PokemonCardComponent } from './pokemon-list/components/pokemon-card/pokemon-card.component'
 import { CatchMeButtonComponent } from './pokemon-list/catch-me-button/catch-me-button.component';
+import { EnvironmentsComponent } from './environments/environments.component';
 
 @NgModule({
   declarations: [
@@ -25,6 +26,7 @@ import { CatchMeButtonComponent } from './pokemon-list/catch-me-button/catch-me-
     NavbarComponent,
     CatchMeButtonComponent,
     PokemonCardComponent,
+    EnvironmentsComponent,
   ],
   imports: [
     BrowserModule,

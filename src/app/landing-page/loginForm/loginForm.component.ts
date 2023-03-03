@@ -1,38 +1,41 @@
-import { Component, EventEmitter, Output } from '@angular/core';
-import { NgForm } from '@angular/forms';
-import { User } from 'src/app/models/user.model';
-import { LoginService } from 'src/app/services/service/login.service';
-import { UserService } from 'src/app/services/service/user.service';
+import { Component, OnInit } from '@angular/core';
+import { FormControl, FormGroup, Validators } from '@angular/forms';
+import { Router } from '@angular/router';
+import { SessionService } from 'src/app/services/service/session.service';
 
 @Component({
-  selector: 'app-loginForm',
+  selector: 'app-register',
   templateUrl: './loginForm.component.html',
   styleUrls: ['./loginForm.component.css']
 })
-export class LoginFormComponent {
+export class RegisterComponent implements OnInit {
 
-  @Output() login: EventEmitter<void> = new EventEmitter();
-  public loading: boolean = false;
+  registerForm: FormGroup = new FormGroup({
+    username: new FormControl('', [Validators.required, Validators.minLength(3)])
+  });
 
-  constructor(
-    private readonly loginService: LoginService,
-    private readonly userService: UserService,
-    ) { }
+  isLoading: boolean = false;
 
-  public loginSubmit(loginForm: NgForm): void {
-    this.loading = true;
-    const { username } = loginForm.value;
+  constructor(private session: SessionService, private router: Router) {
 
-    this.loginService.login(username)
-      .subscribe({
-        next: (user: User) => {
-          this.userService.user = user;
-          this.login.emit()
-        },
-        error: () => {
-
-        }
-      })
+    if (this.session.get() !== false) {
+      this.router.navigateByUrl('/catalogue');
+    }
   }
 
+  ngOnInit(): void {
+    localStorage.clear();   // removes leftover pokemons if pt-session has been removed.
+  }
+
+  get username() {
+    return this.registerForm.get('username');
+  }
+
+  onRegisterClicked() {
+    const result: any = this.registerForm.value;
+    this.session.save({
+      username: result.username
+    });
+    this.router.navigateByUrl('/catalogue');
+  }
 }

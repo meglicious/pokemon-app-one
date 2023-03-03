@@ -6,7 +6,6 @@
   <div fxLayout="row wrap" fxLayoutGap="50px grid">
     <ng-container>
       <tr *ngFor="let singlePokemon of this.user?.pokemon; let i = index">
-        <mat-card class="pokemon-card">
           {{ getFormattedName(singlePokemon.name) }}
           <span>
       <br>
@@ -15,7 +14,6 @@
     </span>
           <br>
           <button (click)="removeFromCollected(singlePokemon.name)">Remove</button>
-        </mat-card>
       </tr>
     </ng-container>
   </div>
