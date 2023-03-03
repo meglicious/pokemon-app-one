@@ -1,9 +1,12 @@
 # PokemonApp
 <img src="https://i.etsystatic.com/30441432/r/il/f6e2a4/3533454704/il_1588xN.3533454704_mcuw.jpg" align="right" height="200" width="200">
 A Pokémon Trainer web app using the Angular Framework
-This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 15.2.0.
+This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 15.2.0.    
+<br>
+<br>
 The pokemon data is provided by [The RESTful Pokémon API.](https://pokeapi.co/)
 
+<br>
 ## How to use
 
 User inputs a name on the register page and can then start collecting pokemons.
@@ -41,5 +44,5 @@ Run `ng e2e` to execute the end-to-end tests via a platform of your choice. To u
 To get more help on the Angular CLI use `ng help` or go check out the [Angular CLI Overview and Command Reference](https://angular.io/cli) page.
 
 ### Created by
-Meg Stefouli 
+Meg Stefouli & <br>
 Ahmad Khodabaks (https://github.com/AhmadKhodabaks)
