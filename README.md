@@ -7,6 +7,7 @@ This project was generated with [Angular CLI](https://github.com/angular/angular
 The pokemon data is provided by [The RESTful Pokémon API.](https://pokeapi.co/)
 
 <br>
+
 ## How to use
 
 User inputs a name on the register page and can then start collecting pokemons.
