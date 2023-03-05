@@ -1,3 +1,4 @@
+import { HttpErrorResponse } from '@angular/common/http';
 import { Component, OnInit } from '@angular/core';
 import { DataService } from '../services/data.service';
 
@@ -15,18 +16,22 @@ export class PokemonListComponent implements OnInit {
 
   ngOnInit(): void {
     this.getPokemons();
-   }
-        getPokemons (){
-          this.dataService.getPokemons(24,this.page + 0)
-          .subscribe((response: any)=> {
-            this.totalPokemons = response.count;
-            response.results.forEach( (result: { name: string; }) => {
-              this.dataService.getMoreData(result.name)
-              .subscribe((uniqResponse: any)=> {
-                this.pokemons.push(uniqResponse);
-                console.log(this.pokemons);
+  }
+  get error(): string{
+    return this.dataService.error;
+  }
+  getPokemons() {
+    this.dataService.getPokemons(24, this.page + 0)
+      .subscribe((response: any) => {
+        this.totalPokemons = response.count;
+        response.results.forEach((result: { name: string; }) => {
+          this.dataService.getMoreData(result.name)
+            .subscribe((uniqResponse: any) => {
+              this.pokemons.push(uniqResponse);
+              console.log(this.pokemons);
+            });
         });
       });
-    });
   }
 }
+
