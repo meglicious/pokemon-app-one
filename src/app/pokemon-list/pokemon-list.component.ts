@@ -1,4 +1,3 @@
-import { HttpErrorResponse } from '@angular/common/http';
 import { Component, OnInit } from '@angular/core';
 import { DataService } from '../services/data.service';
 
@@ -17,7 +16,7 @@ export class PokemonListComponent implements OnInit {
   ngOnInit(): void {
     this.getPokemons();
   }
-  get error(): string{
+  get error(): string {
     return this.dataService.error;
   }
   getPokemons() {
