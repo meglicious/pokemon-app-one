@@ -12,6 +12,7 @@
       <br>
       <b>Attack Power:</b> {{ pokemon.stats[1].base_stat }}
     </p>
+    <app-catch-me-button></app-catch-me-button>
   </div>
 </div>
 <pagination-controls (pageChange)="page = $event; pokemons= []; getPokemons() "></pagination-controls>

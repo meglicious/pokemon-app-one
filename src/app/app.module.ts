@@ -11,6 +11,7 @@ import { LoginPage } from './pages/login/login.page';
 import { ProfilePage } from './pages/profile/profile.page';
 import { LoginFormComponent } from './components/login-form/login-form.component';
 import { FormsModule } from '@angular/forms';
+import { CatchMeButtonComponent } from './components/catch-me-button/catch-me-button.component';
 
 @NgModule({
   declarations: [
@@ -19,7 +20,8 @@ import { FormsModule } from '@angular/forms';
     PokemonListComponent,
     LoginPage,
     ProfilePage,
-    LoginFormComponent
+    LoginFormComponent,
+    CatchMeButtonComponent
   ],
   imports: [
     BrowserModule,
